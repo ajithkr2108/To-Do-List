@@ -1,0 +1,238 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+#body-container {
+    height: 100vh;
+    width: 100vw;
+    background-color:snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container {
+    width: 830px;
+    height: 530px;
+    padding: 2px;
+    display: flex;
+}
+#categories-section {
+    background-color:#0496FF;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    flex: 1;
+    color: #FFFFFF;
+    /* color: #272728; */
+    position: relative;
+    /* margin-right: 10px; */
+}
+#todolist-section {
+    display: flex;
+    flex-direction: column;
+    background-color:#F2F2F6;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    flex: 2;
+}
+.header-container {
+    width: 100%;
+    height: 90px;
+    /* background-color: yellowgreen; */
+}
+#categories-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    /* border: 1px solid red; */
+}
+#categories-head > input{
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    width: 80%;
+    height: 35px;
+}
+#todolist-head {
+    display: flex;
+    position: relative;
+    align-items: center;
+    /* border: 1px solid red; */
+    justify-content: flex-start;
+    color: #3E3E3F;
+    /* background-color: red; */
+}
+#all-list{
+    margin-left: 20px;
+}
+#todays-list{
+    margin-left: 20px;
+}
+#all-btn {
+
+    color:#272728;;
+}
+#today-btn{
+    color:#D8D5D7;
+}
+#add-btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    /* background-color: red; */
+
+}
+#add-btn-div {
+    position: absolute;
+    right: 20px;
+}
+.btn-default-style{
+    background: none;
+	/* color: inherit; */
+	border: none;
+	padding: 0;
+	/* font: inherit; */
+	cursor: pointer;
+	/* outline: inherit; */
+}
+#categories-by-purpose {
+    display: flex;
+    padding-left: 28px;
+    flex-direction: column;
+    /* background-color: aqua; */
+}
+#categories-by-purpose > h2 {
+    font-size: small;
+    font-weight: lighter;
+    letter-spacing: 4px;
+    /* margin-left: 28px; */
+    margin-top: 0px;
+}
+#personal-section {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+#personal-btn{
+    margin-left: 15px;
+    color: #FFFFFF;
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
+#work-section{
+    margin-top: 10px;
+}
+#work-btn {
+    margin-left: 15px;
+    color: #FFFFFF;
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
+#bg-clr {
+    display: flex;
+    align-items: center;
+    /* width: 100%; */
+    height: 90px;
+    /* background-color:#3E3E3F; */
+    position:absolute;
+    bottom: 0px;
+}
+#bg-clr > div{
+    padding-right: 5px;
+}
+.bg-clr-btn {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+#bg-blue-btn {
+    background-color:blue;
+    color: #0496FF;
+}
+#bg-purple-btn {
+    background-color:purple;
+    color: #4E254C;
+}
+#bg-yellow-btn {
+    background-color:yellow;
+    color: #FFE156;
+}
+#reminder-container {
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 20px;
+    box-sizing: border-box;
+    /* padding-left: 20px; */
+    overflow: scroll;
+    /* background: #4E254C; */
+}
+.list-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F2F3;
+    padding: 20px;
+    margin-bottom: 5px;
+}
+.tittle-btn-section {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+}
+.purpose-time {
+    display: flex;
+    padding-left: 27px;
+}
+.remove-btn {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.remove-btn-div {
+    padding-right: 10px;
+    /* margin-right: 10px; */
+}
+.reminder-drop-down {
+    margin-right: 10px;
+    border:none;
+    text-align: start;
+    padding: 2px;
+    background-color: inherit;
+}
+.time {
+    margin-right: 10px;
+}
+.time > input {
+    background-color: inherit;
+    border: none;
+}
+.reminder-heading {
+    color: #343434;
+    font-weight: 600;
+    font-family:sans-serif;
+}
+.output {
+    padding: 0px;
+}
+
+
+/* pop-up-form */
+
+#pop-up-form {
+    width: 250px;
+    /* height: 200px; */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+#pop-up-form > div {
+    display: flex;
+}
