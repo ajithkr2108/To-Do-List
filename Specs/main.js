@@ -6,6 +6,8 @@ let popUpForm = document.getElementById("pop-up-form");
 let reminderContainer =document.getElementById("reminder-container");
 
 
+// Themes change
+
 for(let styleBtn of styleBtns){
     styleBtn.addEventListener("click",(e) => {
         let styleBtnCSS = getComputedStyle(styleBtn);
@@ -14,7 +16,20 @@ for(let styleBtn of styleBtns){
     })
 };
 
-let arObj = [];
+// Themes change End here
+
+
+
+// saving list date entered by a user
+let arrObj = [];
+
+//This counter is used for dynamically inserting id into Remove Btn
+
+let counter = 0;
+
+
+// here we creating HTML structure for to do list dynamically , removing list from HTML structure and  ,adding and removing list data from array of OBJ
+
 popUpForm.addEventListener("submit",(e) => {
 
     // form data into Obj
@@ -22,7 +37,7 @@ popUpForm.addEventListener("submit",(e) => {
     e.preventDefault();
     let fd = new FormData(popUpForm);
     let obj = Object.fromEntries(fd);
-    arObj.push(obj);
+    arrObj.push(obj);
 
     //  list tittle and remove btn
 
@@ -40,13 +55,27 @@ popUpForm.addEventListener("submit",(e) => {
     let removeListBtns = document.getElementsByClassName("remove-btn");
 
 
-    //purpose and time container
+
+    //dynamically inserting id into Remove Btn
+
+
+    removeBtn.setAttribute("id", "list_"+counter);
+
+    obj.id = removeBtn.id;
+
+    counter++;
+
+    // console.log(arrObj);
+
+
+    // creating purpose and time container
 
    let purposeTimeSection = document.createElement('div');
     purposeTimeSection.classList.add('purpose-time');
+
     // purposeTimeSection.setAttribute("action","#");
 
-    // day will show here
+    // creating date for list here
 
     let showDayDiv = document.createElement("div");
     showDayDiv.classList.add('show-day-div');
@@ -54,7 +83,7 @@ popUpForm.addEventListener("submit",(e) => {
     date.classList.add('output');
     date.innerText = obj.day;
 
-    // time will show here
+    // creating time for list here
 
     let time = document.createElement('legend');
     time.classList.add('time');
@@ -63,7 +92,7 @@ popUpForm.addEventListener("submit",(e) => {
     TimeInput.setAttribute("name","time");
 
 
-    // purpose will show here
+    // creating purpuse of list here
 
     let purpose = document.createElement("div");
     purpose.classList.add('purpose');
@@ -71,7 +100,7 @@ popUpForm.addEventListener("submit",(e) => {
     purposeType.classList.add('output');
     purposeType.innerText = obj.purpose;
 
-    // creating structure for created elements
+    // creating structure for list 
 
     reminderContainer.appendChild(listContainer);
     listContainer.appendChild(tittleBtnSection);
@@ -99,17 +128,22 @@ popUpForm.addEventListener("submit",(e) => {
     for(let removeListBtn of removeListBtns){
 
         removeListBtn.addEventListener("click",(e) => {
-            console.log(e,'event');
+            // console.log(e,'event');
             removeListBtn.parentElement.parentElement.parentElement.remove();
-            
+
+            // removing user deleted list from array of obj
+            arrObj = arrObj.filter(obj => {
+                return obj.id !==removeListBtn.id;
+            });
+
+            // console.log(arrObj);
+
         });
     };
-    // console.log(arObj);
 
 });
 
 
-// removing list
 
 
 
