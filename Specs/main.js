@@ -52,7 +52,7 @@ popUpForm.addEventListener("submit",(e) => {
     removeBtn.classList.add('remove-btn','btn-default-style');
     let reminderHeading = document.createElement('p');
     reminderHeading.classList.add("reminder-heading");
-    let removeListBtns = document.getElementsByClassName("remove-btn");
+    // let removeListBtns = document.getElementsByClassName("remove-btn");
 
 
 
@@ -122,27 +122,22 @@ popUpForm.addEventListener("submit",(e) => {
 
     purposeTimeSection.appendChild(purpose);
     purpose.appendChild(purposeType);
-
     // remove List function
 
-    for(let removeListBtn of removeListBtns){
+    removeBtn.addEventListener("click",(e) => {
+        // console.log(e,'event');
+        removeBtn.parentElement.parentElement.parentElement.remove();
 
-        removeListBtn.addEventListener("click",(e) => {
-            // console.log(e,'event');
-            removeListBtn.parentElement.parentElement.parentElement.remove();
-
-            // removing user deleted list from array of obj
-            arrObj = arrObj.filter(obj => {
-                return obj.id !==removeListBtn.id;
-            });
-
-            // console.log(arrObj);
-
+        // removing user deleted list from array of obj
+        arrObj = arrObj.filter(obj => {
+            return obj.id !==removeBtn.id;
         });
-    };
+
+        console.log(arrObj);
+
+    });
 
 });
-
 
 
 
