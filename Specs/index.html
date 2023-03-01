@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<hreead>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,7 +59,40 @@
                         <button id="today-btn" class="btn-default-style"><h1>Today</h1></button>
                     </div>
 
-                    <div id="add-btn-div"><button id="add-btn" class="btn_default-style">+</button></div>
+                    <div id="add-btn-div"><button id="add-btn" class="btn_default-style">+</button>
+                    
+                        <form id="pop-up-form" action="#">
+
+                            <div>
+                                <label for="Reminder" > Reminder :</label>
+                                 <input type="text" name="reminder">
+                            </div>
+                            
+                            <select id="add-day"class="reminder-drop-down" name="day">
+                                <option value="Today">Today</option>
+                                <option value="Tomorrow">Tomorrow</option>
+                                <!-- <option value="next-weekend">Next weekend</option> -->
+                            </select>
+                    
+                            <legend id="add-time">
+                                <input type="time" name="time">
+                            </legend>
+                      
+                            <!-- <br><br>
+                            <input type="submit" value="Submit"> -->
+                    
+                            <select id="add-purpose" class="reminder-drop-down" name="purpose">
+                                <option value="Personal">Personal</option>
+                                <option value="Work">Work</option>
+                            </select>
+
+                            <button id="cancel-btn">Cancel</button>
+
+                    
+                            <input id="submit-btn" type="submit">
+                        </form>
+
+                    </div>
                                        
                 </div>
 
@@ -79,34 +112,7 @@
 
 
 
-    <form id="pop-up-form" action="#">
-
-        <div>
-            <label for="Reminder" > Reminder :</label>
-             <input type="text" name="reminder">
-        </div>
-        
-        <select id="add-day"class="reminder-drop-down" name="day">
-            <option value="Today">Today</option>
-            <option value="Tomorrow">Tomorrow</option>
-            <!-- <option value="next-weekend">Next weekend</option> -->
-        </select>
-
-        <legend id="add-time">
-            <input type="time" name="time">
-        </legend>
-  
-        <!-- <br><br>
-        <input type="submit" value="Submit"> -->
-
-        <select id="add-purpose" class="reminder-drop-down" name="purpose">
-            <option value="Personal">Personal</option>
-            <option value="Work">Work</option>
-        </select>
-
-        <input type="submit"
-        >
-    </form>
+    
 
     <script src="main.js"></script>
 </body>

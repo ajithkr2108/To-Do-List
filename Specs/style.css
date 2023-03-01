@@ -11,7 +11,7 @@ body {
     align-items: center;
 }
 #container {
-    width: 830px;
+    width: 900px;
     height: 530px;
     padding: 2px;
     display: flex;
@@ -83,6 +83,7 @@ body {
     border: none;
     font-weight: bold;
     cursor: pointer;
+    position: relative;
     /* background-color: red; */
 
 }
@@ -226,13 +227,20 @@ body {
 #pop-up-form {
     width: 250px;
     /* height: 200px; */
-    display: flex;
+    display: none;
     flex-direction: column;
     padding: 20px;
     border: 1px solid black;
     border-radius: 20px;
+    position: absolute;
+    right: 0px;
+
 }
 
 #pop-up-form > div {
     display: flex;
+    margin-bottom: 3px;
+}
+#cancel-btn {
+    margin-bottom: 2px;
 }
