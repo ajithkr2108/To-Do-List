@@ -1,19 +1,19 @@
-let personalBtn = document.getElementById("personal-btn");
-let workBtn = document.getElementById("work-btn");
-let bgStyle = document.getElementById("categories-section");
-let styleBtns = document.getElementsByClassName("bg-clr-btn");
-let popUpForm = document.getElementById("pop-up-form");
-let reminderContainer =document.getElementById("reminder-container");
-let allBtn = document.getElementById("all-btn");
-let todayBtn = document.getElementById("today-btn");
-let tomorrowElements = document.getElementsByClassName("Tomorrow");
-let personalThings = document.getElementsByClassName("Personal");
-let workThings = document.getElementsByClassName("Work");
-let allLists =document.getElementsByClassName("list-container");
-let todayBtnElements =document.getElementsByClassName("Today");
-let cancelBtn = document.getElementById("cancel-btn");
-let addBtn = document.getElementById("add-btn");
-let submitBtn = document.getElementById("submit-btn");
+const personalBtn = document.getElementById("personal-btn");
+const workBtn = document.getElementById("work-btn");
+const bgStyle = document.getElementById("categories-section");
+const styleBtns = document.getElementsByClassName("bg-clr-btn");
+const popUpForm = document.getElementById("pop-up-form");
+const reminderContainer =document.getElementById("reminder-container");
+const allBtn = document.getElementById("all-btn");
+const todayBtn = document.getElementById("today-btn");
+const tomorrowElements = document.getElementsByClassName("Tomorrow");
+const personalThings = document.getElementsByClassName("Personal");
+const workThings = document.getElementsByClassName("Work");
+const allLists =document.getElementsByClassName("list-container");
+const todayBtnElements =document.getElementsByClassName("Today");
+const cancelBtn = document.getElementById("cancel-btn");
+const addBtn = document.getElementById("add-btn");
+const submitBtn = document.getElementById("submit-btn");
 
 
 // Themes change
@@ -21,24 +21,33 @@ let submitBtn = document.getElementById("submit-btn");
 for(let styleBtn of styleBtns){
     styleBtn.addEventListener("click",(e) => {
         let styleBtnCSS = getComputedStyle(styleBtn);
+        // console.log(styleBtnCSS.color);
         let btnBgClr = styleBtnCSS.color;
         bgStyle.style.background = btnBgClr;
+        if(styleBtnCSS.color === "rgb(255, 225, 86)"){
+            bgStyle.style.color="#272728";
+            personalBtn.style.color="#272728";
+            workBtn.style.color="#272728";
+        }else{
+            bgStyle.style.color="#FFFFFF";
+            personalBtn.style.color="#FFFFFF";
+            workBtn.style.color="#FFFFFF";
+        }
     })
 };
-
-// Themes change End here
 
 
 
 // saving list date entered by a user
+
 let arrObj = [];
 
-//This counter is used for dynamically inserting id into Remove Btn
+//This counter is used for dynamically insert id into Remove Btn
 
 let counter = 0;
 
 
-// here we creating HTML structure for to do list dynamically , removing list from HTML structure and  ,adding and removing list data from array of OBJ
+// here we creating HTML structure for todo list dynamically , removing list from HTML structure and  ,adding and removing list data from array of OBJ
 
 submitBtn.addEventListener("click",(e) => {
 
@@ -134,6 +143,7 @@ submitBtn.addEventListener("click",(e) => {
 
     purposeTimeSection.appendChild(purpose);
     purpose.appendChild(purposeType);
+    
     // remove List function
 
     removeBtn.addEventListener("click",(e) => {

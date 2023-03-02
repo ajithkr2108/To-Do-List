@@ -229,18 +229,64 @@ body {
     /* height: 200px; */
     display: none;
     flex-direction: column;
-    padding: 20px;
-    border: 1px solid black;
+    padding: 12px;
+    border: 1px solid #ccc;
     border-radius: 20px;
     position: absolute;
     right: 0px;
 
 }
+/* Style for the form elements */
+#pop-up-form input[type="text"],
+#pop-up-form select,
+#pop-up-form input[type="time"] {
+  width: 100%;
+  /* height: 20px; */
+  padding: 5px 5px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 
-#pop-up-form > div {
-    display: flex;
-    margin-bottom: 3px;
-}
-#cancel-btn {
-    margin-bottom: 2px;
-}
+/* Style for the buttons */
+#pop-up-form button,
+#submit-btn {
+    /* background-color: #4CAF50; */
+    color: white;
+    /* height: 20px; */
+    padding: 5px 0px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  #submit-btn{
+    background-color: #4CAF50;
+  }
+  
+  #pop-up-form button:hover {
+    opacity: 0.8;
+  }
+  #submit-btn:hover {
+    opacity: 0.8;
+  }
+  /* Style for the cancel button */
+  #cancel-btn {
+    background-color: #f44336;
+  }
+/* making add icon zoomed */
+
+.fa-plus {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .fa-plus:hover {
+    transform: scale(1.2);
+  }
+
+  /* making personal icon zoomed */
+
+  
+
