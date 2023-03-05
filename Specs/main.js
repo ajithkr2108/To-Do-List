@@ -14,6 +14,8 @@ const todayBtnElements =document.getElementsByClassName("Today");
 const cancelBtn = document.getElementById("cancel-btn");
 const addBtn = document.getElementById("add-btn");
 const submitBtn = document.getElementById("submit-btn");
+const searchInput = document.getElementById("search-input");
+
 
 
 // Themes change
@@ -237,3 +239,21 @@ cancelBtn.addEventListener("click",(e)=>{
     popUpForm.style.display="none";
 })
 
+// filter the list based on the search input
+
+
+searchInput.addEventListener("input", () => {
+    const searchValue = searchInput.value.toLowerCase();
+
+    const filteredList = [...allLists].filter(list => {
+        return list.innerText.toLowerCase().includes(searchValue);
+    });
+
+    for(let list of allLists){
+        if(filteredList.includes(list)){
+            list.style.display="block";
+        } else {
+            list.style.display="none";
+        }
+    }
+});

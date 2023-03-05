@@ -193,7 +193,11 @@ body {
     width: 15px;
     border-radius: 50%;
     border: 1px solid black;
+    padding: 2px;
 }
+.remove-btn:hover {
+    border: 2px solid red; 
+  }
 .remove-btn-div {
     padding-right: 10px;
     /* margin-right: 10px; */
