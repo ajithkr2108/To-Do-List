@@ -256,4 +256,10 @@ searchInput.addEventListener("input", () => {
             list.style.display="none";
         }
     }
+
+    todayBtn.style.color="#D8D5D7";
+    allBtn.style.color ="#272728";
+
+    personalBtn.style.fontWeight="lighter";
+    workBtn.style.fontWeight="lighter";
 });

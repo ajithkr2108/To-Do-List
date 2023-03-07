@@ -219,7 +219,7 @@ body {
 .reminder-heading {
     color: #343434;
     font-weight: 600;
-    font-family:sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 .output {
     padding: 0px;
